@@ -7,8 +7,6 @@ export interface ProductLine {
 }
 
 export interface Invoice {
-  logo: string
-  logoWidth: number
   companyName: string
   name: string
   companyAddress: string

@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react'
 import { Invoice, ProductLine } from '../../types/types'
-import { initialInvoice, initialProductLine } from '../../types/initialData'
+import { initialInvoice, initialProductLine } from '../../types/Data'
 import TextInput from '../TextInput/TextInput'
 import MainContainer from '../MainContainer/MainContainer'
 import Container from '../Container/Container'
@@ -19,9 +19,7 @@ const InvoiceContainer: FC<Props> = ({ data, pdfMode }) => {
     if (name !== 'productLines') {
       const newInvoice = { ...invoice }
 
-      if (name === 'logoWidth' && typeof value === 'number') {
-        newInvoice[name] = value
-      } else if (name !== 'logoWidth' && typeof value === 'string') {
+      if (typeof value === 'string') {
         newInvoice[name] = value
       }
 
